@@ -13,7 +13,9 @@ describe('TabularData Component', () => {
         return (
           <>
             <Typography data-testid="mock-basic-chart">Mocked BasicCard</Typography>
-            <Button onClick={clickToLearnMore}>Click me</Button>
+            <Button data-testid="manually-mocked-basic-card-button" onClick={clickToLearnMore}>
+              Click me
+            </Button>
           </>
         );
       }),
