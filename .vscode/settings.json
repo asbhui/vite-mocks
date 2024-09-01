@@ -1,0 +1,19 @@
+{
+  "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "editor.detectIndentation": false,
+  "editor.formatOnSave": true,
+  "editor.tabSize": 2,
+  "cSpell.language": "en-GB",
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.formatOnPaste": true,
+  "editor.formatOnType": true,
+  "cSpell.words": ["treeshake", "tseslint"],
+  "files.exclude": {
+    "**/.cache": true,
+    "**/build": true,
+    "**/coverage": true,
+    "**/node_modules": true
+  }
+}
