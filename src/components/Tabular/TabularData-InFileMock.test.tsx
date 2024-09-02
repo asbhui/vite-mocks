@@ -1,11 +1,11 @@
 import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import { TabularData } from '@components/Tabular/TabularData';
+import { TabularData } from './TabularData';
 import userEvent from '@testing-library/user-event';
 
 const handleClick = vi.fn().mockImplementation(() => {});
 // In-file mock component example
-vi.mock('@components/Tabular/BasicCard', () => ({
+vi.mock('./BasicCard', () => ({
   default: () => {
     return (
       <>

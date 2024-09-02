@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react';
-import { TabularData } from '@components/Tabular/TabularData';
+import { TabularData } from './TabularData';
 import userEvent from '@testing-library/user-event';
 
 describe('TabularData', async () => {

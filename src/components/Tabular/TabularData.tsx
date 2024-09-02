@@ -1,5 +1,5 @@
 import { Box } from '@mui/material';
-import BasicCard from '@components/Tabular/BasicCard';
+import BasicCard from './BasicCard';
 
 const bull = (
   <Box component="span" sx={{ display: 'inline-block', mx: '2px', transform: 'scale(0.8)' }}>

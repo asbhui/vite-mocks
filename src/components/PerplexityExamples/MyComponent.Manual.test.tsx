@@ -1,7 +1,7 @@
 import { render, screen } from '@testing-library/react';
-import MyComponent from '@components/PerplexityExamples/MyComponent';
+import MyComponent from './MyComponent';
 
-vi.mock('@components/PerplexityExamples/MyComponent');
+vi.mock('./MyComponent');
 
 describe('Manual Mocking', () => {
   it('should first', () => {

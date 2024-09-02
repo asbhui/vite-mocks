@@ -8,7 +8,7 @@ describe('TabularData Component', () => {
     const clickToLearnMore = vi.fn();
 
     // Mock the BasicCard component
-    vi.doMock('@components/Tabular/BasicCard', () => ({
+    vi.doMock('./BasicCard', () => ({
       default: vi.fn().mockImplementation(() => {
         return (
           <>
@@ -22,7 +22,7 @@ describe('TabularData Component', () => {
     }));
 
     // Import TabularData after mocking BasicCard
-    const { TabularData } = await import('@components/Tabular/TabularData');
+    const { TabularData } = await import('./TabularData');
 
     // Render the TabularData component
     render(<TabularData />);

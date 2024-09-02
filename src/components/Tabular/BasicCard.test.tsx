@@ -1,6 +1,6 @@
 import { render, fireEvent, screen } from '@testing-library/react';
-import BasicCard from '@components/Tabular/BasicCard';
 import userEvent from '@testing-library/user-event';
+import BasicCard from './BasicCard';
 
 describe('BasicCard component', () => {
   it('renders with required props', () => {

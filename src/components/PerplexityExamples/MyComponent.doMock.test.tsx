@@ -2,17 +2,17 @@ import { vi, describe, it, expect } from 'vitest';
 import { render, screen } from '@testing-library/react';
 
 // Important: Do not import the real component here
-// import MyComponent from '@components/PerplexityExamples/MyComponent';
+// import MyComponent from './MyComponent';
 
 describe('MyComponent', () => {
   it('renders mocked component', async () => {
     // Use vi.doMock before any imports that use the mocked module
-    vi.doMock('@components/PerplexityExamples/MyComponent', () => ({
+    vi.doMock('./MyComponent', () => ({
       default: vi.fn().mockImplementation(() => <div data-testid="mocked-component">Mocked Content</div>),
     }));
 
     // Import the component after mocking
-    const { default: MyComponent } = await import('@components/PerplexityExamples/MyComponent');
+    const { default: MyComponent } = await import('./MyComponent');
 
     render(<MyComponent />);
     expect(screen.getByTestId('mocked-component')).toBeInTheDocument();
@@ -20,11 +20,11 @@ describe('MyComponent', () => {
   });
 
   it('renders different mock for another test', async () => {
-    vi.doMock('@components/PerplexityExamples/MyComponent', () => ({
+    vi.doMock('./MyComponent', () => ({
       default: vi.fn().mockImplementation(() => <div data-testid="another-mock">Another Mock</div>),
     }));
 
-    const { default: MyComponent } = await import('@components/PerplexityExamples/MyComponent');
+    const { default: MyComponent } = await import('./MyComponent');
 
     render(<MyComponent />);
     expect(screen.getByTestId('another-mock')).toBeInTheDocument();

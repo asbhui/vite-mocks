@@ -1,6 +1,6 @@
 import { describe, it, expect, vi } from 'vitest';
 import { render, screen } from '@testing-library/react';
-import { TabularData } from '@components/Tabular/TabularData';
+import { TabularData } from './TabularData';
 
 /*
 Manual Mocking:
@@ -9,7 +9,7 @@ Vitest doesn't automatically use mocks from __mocks__ folders for ES modules. Yo
 Read mocked component from __mocks__ folder.
 */
 
-vi.mock('@components/Tabular/BasicCard');
+vi.mock('./BasicCard');
 
 describe('TabularData', () => {
   it('renders manually mocked BasicCard', () => {
