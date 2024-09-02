@@ -1,7 +1,22 @@
 /// <reference types="vitest" />
 
-import { defineConfig } from 'vite';
+import { defineConfig, PluginOption } from 'vite';
 import react from '@vitejs/plugin-react';
+import { rm } from 'fs/promises';
+import { resolve } from 'path';
+
+// custom vite plugin to remove certain files after build (such as the mockServiceWorker)
+const bundleExclude = (excludeOutputFile: string): PluginOption => ({
+  apply: 'build',
+  enforce: 'post',
+  name: 'bundle-exclude',
+  writeBundle: async (outputOpts) => {
+    if (outputOpts?.dir) {
+      const excludeTarget = resolve(outputOpts.dir, excludeOutputFile);
+      await rm(excludeTarget, { force: true });
+    }
+  },
+});
 
 // https://vitejs.dev/config/
 export default defineConfig({
@@ -21,12 +36,5 @@ export default defineConfig({
     // mockReset: true,
     // clearMocks: true,
   },
-  plugins: [react()],
-  resolve: {
-    alias: {
-      '@': '/src',
-      '@components': '/src/components',
-      '@libraries': '/src/libraries',
-    },
-  },
+  plugins: [react(), bundleExclude('mockServiceWorker.js')],
 });
