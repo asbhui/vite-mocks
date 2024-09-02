@@ -1,12 +1,11 @@
-import { Stack, Typography } from '@mui/material';
-import { TabularData } from '@components/Tabular/TabularData';
+import { StoreProvider } from './contexts/StoreContext';
+import { TransactionPage } from './pages/TransactionPage';
 
 function App() {
   return (
-    <Stack display={'flex'} justifyContent={'center'} alignItems={'center'} height={'100vh'} gap={5}>
-      <Typography variant="h1">Hello, world!</Typography>
-      <TabularData />
-    </Stack>
+    <StoreProvider>
+      <TransactionPage />
+    </StoreProvider>
   );
 }
 
