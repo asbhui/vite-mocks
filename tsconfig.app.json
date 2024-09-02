@@ -29,5 +29,5 @@
     //   "@libraries/*": ["./src/libraries/*"]
     // }
   },
-  "include": ["src", "vitest.setup.tsx"]
+  "include": ["src", "vitest.setup.tsx", "__mocks__"]
 }
