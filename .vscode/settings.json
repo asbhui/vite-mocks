@@ -9,7 +9,7 @@
   },
   "editor.formatOnPaste": true,
   "editor.formatOnType": true,
-  "cSpell.words": ["treeshake", "tseslint"],
+  "cSpell.words": ["svgr", "treeshake", "tseslint"],
   "files.exclude": {
     "**/.cache": true,
     "**/build": true,
