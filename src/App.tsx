@@ -5,7 +5,7 @@ import YourComponent from './components/YourComponent';
 function App() {
   return (
     <StoreProvider>
-      {/* <TransactionPage /> */}
+      <TransactionPage />
       <YourComponent />
     </StoreProvider>
   );
