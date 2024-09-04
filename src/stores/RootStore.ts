@@ -1,5 +1,5 @@
 import { types, flow } from 'mobx-state-tree';
-import { fetchTransactionApiCall } from '../services/api';
+import { fetchTransactionApiCall, TransactionRes } from '../services/api';
 import TransactionData from './TransactionData';
 
 const RootStore = types
@@ -22,8 +22,9 @@ const RootStore = types
       self.error = '';
       try {
         const data = yield fetchTransactionApiCall({ email: self.email, transactionId: self.transactionId });
+        const filteredData = data.find((item: TransactionRes) => item.id === self.transactionId);
 
-        self.transactionData = TransactionData.create(data);
+        self.transactionData = TransactionData.create(filteredData);
       } catch (error) {
         if (error instanceof Error) {
           self.error = error.message;

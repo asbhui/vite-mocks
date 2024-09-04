@@ -1,13 +1,13 @@
 import axios from 'axios';
 
-interface TransactionData {
+export type TransactionRes = {
   id: string;
   amount: number;
   date: string;
   status: string;
-}
+};
 
-type TransactionReq = {
+export type TransactionReq = {
   email: string;
   transactionId: string;
 };
@@ -15,9 +15,9 @@ type TransactionReq = {
 const axiosInstance = axios.create();
 
 export const fetchTransactionApiCall = async ({ email, transactionId }: TransactionReq) => {
-  const server = `${import.meta.env.VITE_SOME_SERVER}/transaction`;
+  const server = `${import.meta.env.VITE_SOME_SERVER}/transactions`;
   return await axiosInstance
-    .get<TransactionData>(server, {
+    .get<TransactionRes[]>(server, {
       params: { email, transactionId },
     })
     .then((response) => response.data);
