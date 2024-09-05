@@ -1,13 +1,12 @@
-// TestWrapper.tsx
 import React from 'react';
 import { ThemeProvider, createTheme } from '@mui/material/styles';
 
-interface TestWrapperProps {
+interface ScreenSizeWrapperProps {
   children: React.ReactNode;
   width: number;
 }
 
-const TestWrapper: React.FC<TestWrapperProps> = ({ children, width }) => {
+const ScreenSizeWrapper: React.FC<ScreenSizeWrapperProps> = ({ children, width }) => {
   const theme = createTheme({
     breakpoints: {
       values: {
@@ -35,4 +34,4 @@ const TestWrapper: React.FC<TestWrapperProps> = ({ children, width }) => {
   return <ThemeProvider theme={theme}>{children}</ThemeProvider>;
 };
 
-export default TestWrapper;
+export default ScreenSizeWrapper;

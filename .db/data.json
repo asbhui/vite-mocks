@@ -1,0 +1,58 @@
+{
+  "transactions": [
+    {
+      "id": "722d2764-0c35-409c-a00c-3bc6658522fc",
+      "amount": 262.69,
+      "date": "2024-09-04T09:11:18.806Z",
+      "status": "pending"
+    },
+    {
+      "id": "a72dcf0e-9763-448b-9d06-d46c65468831",
+      "amount": 103.03,
+      "date": "2024-09-04T09:11:19.298Z",
+      "status": "pending"
+    },
+    {
+      "id": "b0842cdd-b867-4457-b0fc-67b02bac167b",
+      "amount": 359.95,
+      "date": "2024-09-04T09:11:21.124Z",
+      "status": "completed"
+    },
+    {
+      "id": "3d848af2-5b62-4886-8a37-b8c774018d1a",
+      "amount": 775.62,
+      "date": "2024-09-04T09:11:21.834Z",
+      "status": "pending"
+    },
+    {
+      "id": "58dacdec-2e21-4a0f-9493-37df10c34da5",
+      "amount": 448.96,
+      "date": "2024-09-04T09:11:22.377Z",
+      "status": "pending"
+    },
+    {
+      "id": "dcc03119-f5a1-4168-b4e5-ff5dc174bbf9",
+      "amount": 253.89,
+      "date": "2024-09-04T09:11:22.896Z",
+      "status": "pending"
+    },
+    {
+      "id": "96bb2c76-6828-4faf-a9b4-8a02ccb3458f",
+      "amount": 797.84,
+      "date": "2024-09-04T09:12:01.587Z",
+      "status": "completed"
+    },
+    {
+      "id": "90acbd1c-fe4b-4030-b34f-c0e35e759333",
+      "amount": 19.58,
+      "date": "2024-09-04T09:12:02.519Z",
+      "status": "pending"
+    },
+    {
+      "id": "e30793db-e1f5-47e4-9509-c90dcd753c2e",
+      "amount": 992.74,
+      "date": "2024-09-04T09:12:03.064Z",
+      "status": "completed"
+    }
+  ]
+}

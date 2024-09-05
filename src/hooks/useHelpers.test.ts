@@ -47,8 +47,9 @@ describe('Helpers hooks', () => {
 
     expect(numberOrdinal(3)).toBe('rd');
     expect(numberOrdinal(154)).toBe('th');
-    expect(numberOrdinal(11)).toBe('th');
+    expect(numberOrdinal(22)).toBe('nd');
     expect(numberOrdinal(21)).toBe('st');
     expect(numberOrdinal(0)).toBe('th');
+    expect(numberOrdinal(15)).toBe('th');
   });
 });

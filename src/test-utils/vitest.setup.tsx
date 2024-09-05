@@ -1,10 +1,10 @@
-import { server } from './src/mocks/server';
-import { rootStore } from './src/stores/RootStore';
 import '@testing-library/jest-dom';
+import { rootStore } from '../stores/RootStore';
+import { server } from '../mocks/server';
 
 beforeAll(() => {
   rootStore.resetForm();
-  server.listen();
+  server.listen({ onUnhandledRequest: 'error' });
 });
 
 afterEach(() => {

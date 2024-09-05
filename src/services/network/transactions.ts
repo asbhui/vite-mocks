@@ -1,23 +1,21 @@
-import axios from 'axios';
+import config from '../config';
+import axiosInstance from './axiosInterceptors';
 
-interface TransactionData {
+export type TransactionRes = {
   id: string;
   amount: number;
   date: string;
   status: string;
-}
+};
 
-type TransactionReq = {
+export type TransactionReq = {
   email: string;
   transactionId: string;
 };
 
-const axiosInstance = axios.create();
-
 export const fetchTransactionApiCall = async ({ email, transactionId }: TransactionReq) => {
-  const server = `${import.meta.env.VITE_SOME_SERVER}/transaction`;
   return await axiosInstance
-    .get<TransactionData>(server, {
+    .get<TransactionRes[]>(config.transactions, {
       params: { email, transactionId },
     })
     .then((response) => response.data);

@@ -32,7 +32,11 @@ export default defineConfig({
     environment: 'jsdom',
     css: true,
     include: ['**/?(*.)test.ts?(x)'],
-    setupFiles: 'vitest.setup.tsx',
+    setupFiles: './src/test-utils/vitest.setup.tsx',
+    coverage: {
+      include: ['src/**'],
+      exclude: ['**/__mocks__/**', '**/build/**', '**/dist/**', '**/@types/**'],
+    },
     // mockReset: true,
     // clearMocks: true,
   },

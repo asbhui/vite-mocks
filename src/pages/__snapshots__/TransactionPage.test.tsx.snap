@@ -1,0 +1,34 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`TransactionPage test > should render transaction page 1`] = `
+<div>
+  <div>
+    <h1>
+      Transaction Lookup
+    </h1>
+    <form>
+      Email:
+      <input
+        placeholder="Email"
+        required=""
+        type="email"
+        value=""
+      />
+      <br />
+      Transaction ID:
+      <input
+        placeholder="Transaction ID"
+        required=""
+        type="text"
+        value=""
+      />
+      <br />
+      <button
+        type="submit"
+      >
+        Fetch Transaction
+      </button>
+    </form>
+  </div>
+</div>
+`;
