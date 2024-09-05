@@ -19,12 +19,11 @@ const RootStore = types
       self.transactionId = id;
     },
     fetchTransaction: flow(function* fetchTransaction() {
-      console.log('calling api call with email and transactionId', self.email, self.transactionId);
       self.isLoading = true;
       self.error = '';
       try {
         const data = yield fetchTransactionApiCall({ email: self.email, transactionId: self.transactionId });
-        console.log('fetchTransactionApiCall data', data);
+
         const filteredData = data?.find((item: TransactionRes) => item.id === self.transactionId);
 
         self.transactionData = TransactionData.create(filteredData);

@@ -2,33 +2,53 @@
 
 exports[`TransactionPage test > should render transaction page 1`] = `
 <div>
-  <div>
-    <h1>
+  <div
+    class="MuiStack-root css-m8u4h0-MuiStack-root"
+  >
+    <h2
+      class="MuiTypography-root MuiTypography-h2 css-1bkebpk-MuiTypography-root"
+    >
       Transaction Lookup
-    </h1>
-    <form>
-      Email:
-      <input
-        placeholder="Email"
-        required=""
-        type="email"
-        value=""
-      />
-      <br />
-      Transaction ID:
-      <input
-        placeholder="Transaction ID"
-        required=""
-        type="text"
-        value=""
-      />
-      <br />
-      <button
-        type="submit"
-      >
-        Fetch Transaction
-      </button>
-    </form>
+    </h2>
+    <div
+      class="MuiStack-root css-ijvzda-MuiStack-root"
+    >
+      <form>
+        <div
+          class="MuiStack-root css-1ucnu3w-MuiStack-root"
+        >
+          <div
+            class="MuiStack-root css-1hezniw-MuiStack-root"
+          >
+            Email
+            :
+            <input
+              placeholder="Email"
+              required=""
+              type="email"
+              value=""
+            />
+          </div>
+          <div
+            class="MuiStack-root css-1hezniw-MuiStack-root"
+          >
+            Transaction ID
+            :
+            <input
+              placeholder="Transaction ID"
+              required=""
+              type="text"
+              value=""
+            />
+          </div>
+          <button
+            type="submit"
+          >
+            Lookup
+          </button>
+        </div>
+      </form>
+    </div>
   </div>
 </div>
 `;

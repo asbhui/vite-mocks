@@ -1,4 +1,4 @@
-import { renderHook } from '@testing-library/react';
+import { renderHook } from '../test-utils/vitest.setup';
 import { useHelpers } from './useHelpers';
 
 describe('Helpers hooks', () => {

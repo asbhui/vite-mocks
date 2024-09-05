@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen } from '../../test-utils/vitest.setup';
 import MyComponent from './MyComponent';
 
 vi.mock('./MyComponent');

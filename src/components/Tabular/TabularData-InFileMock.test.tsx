@@ -1,5 +1,4 @@
-import { describe, it, expect, vi } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render, screen } from '../../test-utils/vitest.setup';
 import { TabularData } from './TabularData';
 import userEvent from '@testing-library/user-event';
 

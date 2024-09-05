@@ -1,0 +1,16 @@
+{
+  "transactionPage": {
+    "title": "Transaction Lookup",
+    "form": {
+      "email": "Email",
+      "emailPlaceholder": "Email",
+      "transactionId": "Transaction ID",
+      "transactionIdPlaceholder": "Transaction ID",
+
+      "button": "Lookup"
+    }
+  },
+  "myComponentPage": {
+    "title": "My Component"
+  }
+}

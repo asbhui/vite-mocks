@@ -1,4 +1,4 @@
-import { render, fireEvent, screen } from '@testing-library/react';
+import { render, fireEvent, screen } from '../../test-utils/vitest.setup';
 import userEvent from '@testing-library/user-event';
 import BasicCard from './BasicCard';
 

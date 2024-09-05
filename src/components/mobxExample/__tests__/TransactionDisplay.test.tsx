@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { render, screen } from '../../../test-utils/vitest.setup';
 import { rootStore } from '../../../stores/RootStore';
 import { StoreProvider } from '../../../contexts/StoreContext';
 import { TransactionDisplay } from '../TransactionDisplay';

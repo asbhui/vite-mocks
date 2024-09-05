@@ -1,5 +1,4 @@
-import { vi, describe, it, expect } from 'vitest';
-import { render, screen } from '@testing-library/react';
+import { render, screen } from '../../test-utils/vitest.setup';
 
 // Important: Do not import the real component here
 // import MyComponent from './MyComponent';
