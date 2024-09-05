@@ -4,12 +4,12 @@ import { TransactionPage } from './pages/TransactionPage';
 import { Stack } from '@mui/material';
 import MyComponent from './components/PerplexityExamples/MyComponent';
 import YourComponent from './components/YourComponent';
-import { LocaleProvider } from './contexts/LocaleProvider';
+import { LocalizationProvider } from './contexts/LocalizationProvider';
 
 function App() {
   return (
     <StoreProvider>
-      <LocaleProvider>
+      <LocalizationProvider>
         <Stack
           gap={5}
           sx={{ display: 'flex', justifyContent: 'center', alignItems: 'center', width: '90vw', height: '90vh' }}
@@ -18,7 +18,7 @@ function App() {
           <MyComponent />
           <YourComponent />
         </Stack>
-      </LocaleProvider>
+      </LocalizationProvider>
     </StoreProvider>
   );
 }
